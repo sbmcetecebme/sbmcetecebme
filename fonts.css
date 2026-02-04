@@ -1,7 +1,10 @@
 /* Shared font definitions and typographic scale */
+/* NOTE: Fonts are now loaded via <link rel="stylesheet"> and <link rel="preload"> in HTML head */
+/* This prevents FOUT/FOIT by loading fonts in parallel with HTML parsing */
+
 @font-face {
   font-family: 'electro_wave_vol_2';
-  src: local('ElectroWaveVol2'), url('./assets/ElectroWaveVol2.ttf') format('truetype');
+  src: url('./assets/ElectroWaveVol2.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -9,7 +12,7 @@
 
 @font-face {
   font-family: 'pixel_font';
-  src: local('10Pixel'), url('./assets/10Pixel.ttf') format('truetype');
+  src: url('./assets/10Pixel.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -17,7 +20,7 @@
 
 @font-face {
   font-family: 'cocogoose';
-  src: local('Cocogoose'), url('./assets/Cocogoose.ttf') format('truetype'), url('./assets/Cocogoose.woff2') format('woff2');
+  src: url('./assets/Cocogoose.ttf') format('truetype'), url('./assets/Cocogoose.woff2') format('woff2');
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
@@ -25,7 +28,7 @@
 
 @font-face {
   font-family: 'magmawave';
-  src: local('MagmaWave'), url('./assets/MagmaWave.otf') format('opentype');
+  src: url('./assets/MagmaWave.otf') format('opentype');
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
@@ -33,7 +36,7 @@
 
 @font-face {
   font-family: 'cyborg_punk';
-  src: local('CyborgPunk'), url('./assets/CyborgPunk.ttf') format('truetype'), url('./assets/CyborgPunk.otf') format('opentype');
+  src: url('./assets/CyborgPunk.ttf') format('truetype'), url('./assets/CyborgPunk.otf') format('opentype');
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
@@ -42,7 +45,7 @@
 /* EIOT: custom workshop display font requested by the user */
 @font-face {
   font-family: 'eiot';
-  src: local('EIOT'), url('./assets/EIOT.ttf') format('truetype');
+  src: url('./assets/EIOT.ttf') format('truetype');
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
@@ -51,7 +54,7 @@
 /* Additional fonts discovered in the assets folder */
 @font-face {
   font-family: 'heavitas';
-  src: local('Heavitas'), url('./assets/Heavitas.ttf') format('truetype');
+  src: url('./assets/Heavitas.ttf') format('truetype');
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
@@ -59,7 +62,7 @@
 
 @font-face {
   font-family: 'magnetar';
-  src: local('Magnetar'), url('./assets/Magnetar.otf') format('opentype');
+  src: url('./assets/Magnetar.otf') format('opentype');
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
@@ -67,7 +70,7 @@
 
 @font-face {
   font-family: 'merkur';
-  src: local('Merkur'), url('./assets/Merkur.otf') format('opentype');
+  src: url('./assets/Merkur.otf') format('opentype');
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
@@ -75,7 +78,7 @@
 
 @font-face {
   font-family: 'minecraft_px';
-  src: local('MINECRAFT'), url('./assets/MINECRAFT.ttf') format('truetype');
+  src: url('./assets/MINECRAFT.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -83,7 +86,7 @@
 
 @font-face {
   font-family: 'retro_display';
-  src: local('Retro'), url('./assets/Retro.otf') format('opentype');
+  src: url('./assets/Retro.otf') format('opentype');
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
@@ -91,7 +94,7 @@
 
 @font-face {
   font-family: 'science';
-  src: local('Science'), url('./assets/Science.ttf') format('truetype');
+  src: url('./assets/Science.ttf') format('truetype');
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
@@ -99,7 +102,7 @@
 
 @font-face {
   font-family: 'space_crusaders';
-  src: local('Space Crusaders'), url('./assets/Space%20Crusaders.ttf') format('truetype');
+  src: url('./assets/Space%20Crusaders.ttf') format('truetype');
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
@@ -107,7 +110,7 @@
 
 @font-face {
   font-family: 'starjedi';
-  src: local('Starjedi'), url('./assets/Starjedi.ttf') format('truetype');
+  src: url('./assets/Starjedi.ttf') format('truetype');
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
@@ -115,7 +118,7 @@
 
 @font-face {
   font-family: 'whitenice';
-  src: local('Whitenice'), url('./assets/Whitenice.ttf') format('truetype');
+  src: url('./assets/Whitenice.ttf') format('truetype');
   font-weight: 300 700;
   font-style: normal;
   font-display: swap;
@@ -123,18 +126,18 @@
 
 /* Font roles using available custom fonts */
 :root {
-  --font-hero: 'electro_wave_vol_2', 'cocogoose', 'Arial Black', sans-serif;
-  --font-heading: 'pixel_font', 'heavitas', 'Arial Black', sans-serif;
+  --font-hero: 'electro_wave_vol_2', 'Arial Black', sans-serif;
+  --font-heading: 'pixel_font', 'Arial Black', sans-serif;
   --font-body: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-  --font-accent: 'cocogoose', 'electro_wave_vol_2', 'Courier New', monospace;
-  --font-workshop: 'cocogoose', 'retro_display', 'electro_wave_vol_2', 'Arial Black', sans-serif;
-  --font-timer: 'magmawave', 'magnetar', monospace;
-  --font-cyborg: 'cyborg_punk', 'merkur', 'Arial Black', sans-serif;
-  --font-retro: 'retro_display', 'pixel_font', sans-serif;
-  --font-sci: 'space_crusaders', 'science', 'starjedi', monospace;
-  --font-eiot: 'eiot', 'space_crusaders', 'science', sans-serif;
-  --font-display: 'heavitas', 'cocogoose', 'electro_wave_vol_2', sans-serif;
-  --font-minecraft: 'minecraft_px', 'monospace';
+  --font-accent: 'cocogoose', 'Arial', sans-serif;
+  --font-workshop: 'cocogoose', 'Arial Black', sans-serif;
+  --font-timer: 'magmawave', monospace;
+  --font-cyborg: 'cyborg_punk', 'Arial Black', sans-serif;
+  --font-retro: 'retro_display', 'Arial', sans-serif;
+  --font-sci: 'space_crusaders', 'monospace';
+  --font-eiot: 'eiot', 'Arial', sans-serif;
+  --font-display: 'heavitas', 'Arial Black', sans-serif;
+  --font-minecraft: 'minecraft_px', monospace;
 
   /* Typographic scale */
   /* Increased sizes for better visibility */
