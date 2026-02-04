@@ -93,12 +93,14 @@
 }
 
 @font-face {
-  font-family: 'science';
+  font-family: 'Science';
   src: url('./assets/Science.ttf') format('truetype');
   font-weight: 400 700;
   font-style: normal;
   font-display: swap;
 }
+
+
 
 @font-face {
   font-family: 'space_crusaders';
@@ -123,6 +125,14 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Dune';
+  src: url('./assets/Dune.ttf') format('truetype');
+  font-weight: 300 700; /* keep range only if font supports it */
+  font-style: normal;   /* ✅ MUST be normal */
+  font-display: swap;
+}
+
 
 /* Font roles using available custom fonts */
 :root {
@@ -138,6 +148,7 @@
   --font-eiot: 'eiot', 'Arial', sans-serif;
   --font-display: 'heavitas', 'Arial Black', sans-serif;
   --font-minecraft: 'minecraft_px', monospace;
+  --font-dune: 'Dune', system-ui, sans-serif;
 
   /* Typographic scale */
   /* Increased sizes for better visibility */

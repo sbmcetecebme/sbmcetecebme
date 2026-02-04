@@ -268,18 +268,23 @@ body::before {
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
+  width: 100%;
+  overflow-x: auto;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .countdown-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 80px;
+  min-width: 70px;
+  flex-shrink: 0;
 }
 
 .countdown-value {
   font-family: var(--font-timer);
-  font-size: clamp(32px, 6vw, 56px);
+  font-size: clamp(28px, 5vw, 56px);
   font-weight: 700;
   background: linear-gradient(135deg, var(--pink), var(--blue-light));
   -webkit-background-clip: text;
@@ -290,39 +295,40 @@ body::before {
 }
 
 .countdown-unit {
-  font-size: 12px;
+  font-size: 10px;
   color: var(--blue-light);
   text-transform: uppercase;
-  margin-top: 8px;
-  letter-spacing: 1px;
+  margin-top: 6px;
+  letter-spacing: 0.8px;
   font-weight: 600;
 }
 
 .countdown-separator {
   font-family: var(--font-timer);
-  font-size: clamp(24px, 5vw, 40px);
+  font-size: clamp(20px, 4vw, 40px);
   color: var(--pink);
   font-weight: 700;
   opacity: 0.6;
-  margin: 0 4px;
+  margin: 0 2px;
+  flex-shrink: 0;
 }
 
 @media (max-width: 600px) {
   .countdown-container {
     margin: 30px 0;
-    padding: 20px 15px;
+    padding: 20px 10px;
   }
 
   .countdown-label {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .countdown-timer {
-    gap: 10px;
+    gap: 6px;
   }
 
   .countdown-item {
-    min-width: 60px;
+    min-width: 55px;
   }
 }
 
@@ -444,7 +450,7 @@ body::before {
 .card .value::after{content:'';position:absolute;left:-40%;top:-10%;width:40%;height:120%;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.06), rgba(255,255,255,0.02));transform:skewX(-20deg);opacity:0.08;pointer-events:none;animation:sweep 6s linear infinite}
 @keyframes sweep{0%{transform:translateX(-120%) skewX(-20deg);opacity:0.05}50%{transform:translateX(40%) skewX(-20deg);opacity:0.08}100%{transform:translateX(220%) skewX(-20deg);opacity:0.05}}
 @media (max-width:991px){.cards-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:599px){.event-cards{padding:28px 14px}.cards-grid{grid-template-columns:1fr;gap:14px}.card{min-height:90px;padding:16px}.value{font-size:18px}}
+@media (max-width:599px){.event-cards{padding:28px 14px}.cards-grid{grid-template-columns:repeat(2,1fr);gap:14px}.card{min-height:100px;padding:16px}.label{font-size:11px}.value{font-size:16px}}
 @media (min-width:1400px){.cards-grid{gap:28px}.card{padding:26px;min-height:130px}.value{font-size:22px}}
 
 /* Responsive */

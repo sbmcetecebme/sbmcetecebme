@@ -154,6 +154,13 @@ body::before {
   font-size: var(--fs-h2);
   margin-bottom: 24px;
   font-weight: 600;
+  padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .content-section h1 {
+    padding-top: 100px;
+  }
 }
 
 .content-section p {
