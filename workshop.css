@@ -245,8 +245,8 @@ body::before {
 /* Register Button */
 /* Countdown Timer */
 .countdown-container {
-  margin: 40px 0;
-  padding: 30px 20px;
+  margin: 20px 0;
+  padding: 20px 10px;
   background: linear-gradient(135deg, rgba(30, 144, 255, 0.1), rgba(255, 20, 147, 0.05));
   border: 2px solid rgba(30, 144, 255, 0.3);
   border-radius: 12px;
@@ -317,19 +317,38 @@ body::before {
 @media (max-width: 600px) {
   .countdown-container {
     margin: 30px 0;
-    padding: 20px 10px;
+    padding: 16px 8px;
   }
 
   .countdown-label {
     font-size: 16px;
   }
 
+  /* Force single-line, full-width timer */
   .countdown-timer {
-    gap: 6px;
+    flex-wrap: nowrap;          /* 🔒 single line only */
+    gap: 4px;                   /* tighter spacing */
+    overflow: hidden;           /* no horizontal scroll */
+    padding: 0;
   }
 
   .countdown-item {
-    min-width: 55px;
+    min-width: unset;           /* remove fixed width */
+    flex: 1 1 0;                /* evenly distribute */
+  }
+
+  .countdown-value {
+    font-size: clamp(20px, 6vw, 34px); /* scales to screen */
+  }
+
+  .countdown-unit {
+    font-size: 9px;
+    letter-spacing: 0.6px;
+  }
+
+  .countdown-separator {
+    font-size: clamp(16px, 4vw, 26px);
+    margin: 0;
   }
 }
 
