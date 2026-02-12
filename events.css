@@ -38,6 +38,25 @@ html, body {
   margin-bottom: 80px;
 }
 
+/* New content blocks moved to events page */
+.event-symposium,
+.event-workshop {
+  max-width: 920px;
+  margin: 0 auto 40px;
+  padding: 14px 18px;
+  color: var(--text);
+}
+
+.event-symposium h2,
+.event-workshop h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.event-workshop .cards-container { margin-top: 12px; }
+.event-workshop .cards-grid { gap: 12px; }
+.event-workshop .btn { margin-top: 14px; display: inline-block; }
+
 .section-title {
   font-family: var(--font-heading);
   font-size: var(--fs-h1);
